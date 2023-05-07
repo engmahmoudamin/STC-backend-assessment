@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+  application:
+    name: stc-demo-api
+
+server:
+  port: 8088
+  servlet:
+    context-path: /stc/demo/v1/api
+
+logging:
+  file:
+    name: logs/stc-demo.log

@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "94a1ce46-99f5-4dfa-8a39-ff197ead7626",
+		"name": "stc-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2039473",
+		"_collection_link": "https://bold-escape-386494.postman.co/workspace/Adaa~b167ee30-97e3-4cd0-a248-defa5a55398d/collection/2039473-94a1ce46-99f5-4dfa-8a39-ff197ead7626?action=share&creator=2039473&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "groups",
+			"item": [
+				{
+					"name": "Add Group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groupName\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/stc/demo/v1/api/groups",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"stc",
+								"demo",
+								"v1",
+								"api",
+								"groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Groups",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"groupName\": \"admin\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/stc/demo/v1/api/groups",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"stc",
+								"demo",
+								"v1",
+								"api",
+								"groups"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "permissions",
+			"item": [
+				{
+					"name": "Add Permission",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\": \"mahmoud@gmail.com\",\r\n    \"permissionLevel\": \"FULL_ACCESS\",\r\n    \"groupName\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/stc/demo/v1/api/permissions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"stc",
+								"demo",
+								"v1",
+								"api",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Permission 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\": \"mah.amin@gmail.com\",\r\n    \"permissionLevel\": \"READ_ACCESS\",\r\n    \"groupName\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/stc/demo/v1/api/permissions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"stc",
+								"demo",
+								"v1",
+								"api",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Permission 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\": \"engmahmoudamin14@gmail.com\",\r\n    \"permissionLevel\": \"EDIT_ACCESS\",\r\n    \"groupName\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/stc/demo/v1/api/permissions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"stc",
+								"demo",
+								"v1",
+								"api",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Permissions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8088/stc/demo/v1/api/permissions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"stc",
+								"demo",
+								"v1",
+								"api",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "items",
+			"item": [
+				{
+					"name": "Add Space Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"stc-assessments\",\r\n    \"groupName\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/stc/demo/v1/api/items/space",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"stc",
+								"demo",
+								"v1",
+								"api",
+								"items",
+								"space"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Folder Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"backend\",\r\n    \"userEmail\": \"mahmoud@gmail.com\",\r\n    \"parentItemId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/stc/demo/v1/api/items/folder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"stc",
+								"demo",
+								"v1",
+								"api",
+								"items",
+								"folder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "files",
+			"item": [
+				{
+					"name": "Add File Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/H:/Companies/STC/STC-backend-assessment.pdf"
+								},
+								{
+									"key": "parentItemId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "userEmail",
+									"value": "engmahmoudamin@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "userEmail",
+									"value": "mahmoud@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8088/stc/demo/v1/api/files",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"stc",
+								"demo",
+								"v1",
+								"api",
+								"files"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View File Meta Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fileName\": \"STC-backend-assessment.pdf\",\r\n    \"userEmail\": \"mahmoud@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/stc/demo/v1/api/files/metadata",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"stc",
+								"demo",
+								"v1",
+								"api",
+								"files",
+								"metadata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fileName\": \"STC-backend-assessment.pdf\",\r\n    \"userEmail\": \"mahmoud@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/stc/demo/v1/api/files/download",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"stc",
+								"demo",
+								"v1",
+								"api",
+								"files",
+								"download"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8088/stc/demo/v1/api/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"stc",
+						"demo",
+						"v1",
+						"api",
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
